@@ -20,4 +20,6 @@ Choose text editor (for editing merge messages)...
 
 Choose option Unix tools... 
 
-![Downloads](../images/git-install-options-3.png)
+![Downloads](../images/git-install-options-3.png)  
+
+and complete installation.
