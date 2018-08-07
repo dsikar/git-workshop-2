@@ -41,4 +41,65 @@ Unpacking objects: 100% (39/39), done.
 
 Note you will probably be asked for a username and password.  
 
+![Authentication](../images/authenticating.png)
+
+Changing directory into repository
+```
+$ cd git-workshop
+```
+
+**git remote** information about the remote repository
+```
+$ git remote
+origin
+```
+
+**git branch** - What branch are we working on?
+```
+$ git branch
+* master
+```
+
+Show remote branches
+```
+$ git branch -r
+  origin/master
+```
+
+**git log** - Show logs
+```
+$ git log
+commit d9c9b4848004088596ccca72215e9727d225cff6 (HEAD -> master)
+Author: Daniel Sikar <daniel.sikar@jci.com>
+Date:   Tue Aug 7 09:43:55 2018 +0100
+
+    Added image.
+
+commit 6f88293c73851825709d65cb5661285214465f6f (origin/master)
+Merge: 0f8ae9b 67b4052
+Author: Daniel Sikar <daniel.sikar@jci.com>
+Date:   Tue Aug 7 09:11:54 2018 +0100
+```
+
+Verbose switch -v
+```
+$ git remote -v
+origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (fetch)
+origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (push)
+```
+
+
+Other git commands...
+**git init** - Initialise a repository, list hidden files in chronological and size descending order (-last)
+```
+$ cd ~/Documents/jci-git/
+$ git init multi-mx-simulator
+$ cd multi-mx-simulator
+$ ls -last
+```
+
+Notes, git repositories can be moved around like any set of files, sent as zip file, copied to pen drive, etc.  
+
+Please send any feedback comments to daniel.sikar@jci.com.
+
 
