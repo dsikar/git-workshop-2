@@ -72,7 +72,7 @@ $ history
 
 Repeat a command with exclamation mark and number notation, e.g. repeat command 1
 ```
-$!1
+$ !1
 ```
 
 
