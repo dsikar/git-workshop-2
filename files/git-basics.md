@@ -29,7 +29,7 @@ git config --global user.email
 git config --global user.name
 ```
 
-**git clone** - Cloning a repository - note your repository url might be different
+**git clone** - Cloning a repository - note your might need to append your JCI User ID to git repository URL
 ```
 $ git clone https://jsikard@github.jci.com/jsikard/git-workshop.git
 Cloning into 'git-workshop'...
