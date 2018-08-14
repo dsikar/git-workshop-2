@@ -232,7 +232,7 @@ $ git commit -m "Added files-<your-initials>.txt"
 ```
 $ git push
 ```
-6. Check last 5 log entries (-5 switch)
+6. For good measure, check last 5 log entries (-5 switch)
 ```
 $ git log -5
 ```
