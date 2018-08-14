@@ -55,6 +55,13 @@ $ git remote
 origin
 ```
 
+Verbose switch -v
+```
+$ git remote -v
+origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (fetch)
+origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (push)
+```
+
 **git branch** - What branch are we working on?
 ```
 $ git branch
@@ -82,14 +89,67 @@ Author: Daniel Sikar <daniel.sikar@jci.com>
 Date:   Tue Aug 7 09:11:54 2018 +0100
 ```
 
-Verbose switch -v
+## LAB 1
+
+1. Open Git-Bash and change directory to ~/Documents
+```
+$ cd ~/Documents
+```
+2. Create jci-git directory
+```
+$ mkdir jci-git
+```
+3. Change directory to jci-git
+```
+$ cd jci-git
+```
+4. Configure your email address and user name 
+```
+$ git config --global user.email JCIGlobalID@jci.com - note use your own JCI email address, name in quotes 
+$ git config --global user.name "My Name"
+```
+5. Check configuration
+```
+$ git config --global user.email
+$ git config --global user.name
+```
+6.  Clone a repository - note you might have to append your JCI Global ID to URL like such https://jsikard@github.jci.com/jsikard/git-workshop.git
+```
+$ git clone https://github.jci.com/jsikard/git-workshop.git
+Cloning into 'git-workshop'...
+remote: Counting objects: 39, done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 39 (delta 9), reused 18 (delta 3), pack-reused 0
+Unpacking objects: 100% (39/39), done.
+```
+7. Change directory to git-workshop
+```
+$ cd git-workshop
+```
+8. Inspect files
+```
+$ ls -last
+```
+9. Find out where remote repository is
+```
+$ git remote
+origin
+```
+10. Use **verbose -v** switch for added information
 ```
 $ git remote -v
 origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (fetch)
 origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (push)
 ```
-
-# Adding (Modifying repository), Staging and Committing files.
+11. Show the branches that exist in your local repository
+```
+$ git branch
+```
+12. Show branches that exist in the remote repository
+```
+$ git branch -v
+```
+## Adding (Modifying repository), Staging and Committing files. Checking logs and deleting files.
 
 **git status** - current repository status
 ```
@@ -103,7 +163,7 @@ nothing to commit, working tree clean
 Adding a file to repository
 
 ```
-$ ls > files.txt
+$ ls > files-ds.txt
 ```
 
 **git status** - current repository status (Modified)
@@ -150,16 +210,34 @@ To https://github.jci.com/jsikard/git-workshop.git
 
 ## LAB 2
 
-Cloning, adding, staging, commiting and pushing.  
+Adding, staging, commiting and pushing.  
 
-1. Clone repository **git clone https://github.jci.com/jsikard/git-workshop.git**  
-2. Change directory **cd git-workshop** 
-3. Add a file **ls > files-<your-initials>.txt**
-4. Add to git **git add files-<your-initials>.txt**
-5. Commit **git commit -m "Added files-<your-initials>.txt**
-6. Push to remote repository **git push**
+1.  Change directory to git-workshop if not there already
+```
+$ cd git-workshop
+```
+2. Add a file (Modify repository)
+```
+$ ls > files-<your-initials>.txt
+```
+3. Add to Staging area
+```
+$ git add files-<your-initials>.txt
+```
+4. Commit 
+```
+$ git commit -m "Added files-<your-initials>.txt"
+```
+5. Push to remote repository 
+```
+$ git push
+```
+6. Check last 5 log entries (-5 switch)
+```
+$ git log -5
+```
 
-## Next week we will look at branching and merging features as well as **git init**
+## Next week we will look at branching and merging features as well as **git init** and deleting files
 
 **git init** - Initialise a repository, list hidden files in chronological and size descending order (-last)
 
