@@ -30,6 +30,7 @@ git config --global user.name
 ```
 
 **git clone** - Cloning a repository - note your might need to append your JCI User ID to git repository URL
+
 ```
 $ git clone https://jsikard@github.jci.com/jsikard/git-workshop.git
 Cloning into 'git-workshop'...
@@ -88,9 +89,80 @@ origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (fetch)
 origin  https://jsikard@github.jci.com/jsikard/git-workshop.git (push)
 ```
 
+# Adding (Modifying repository), Staging and Committing files.
 
-Other git commands...
+**git status** - current repository status
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
+Adding a file to repository
+
+```
+$ ls > files.txt
+```
+
+**git status** - current repository status (Modified)
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        files-ds.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+**git-add** - Add files to "Staging" area
+
+```
+$ git add files-ds.txt
+warning: LF will be replaced by CRLF in files-ds.txt.
+The file will have its original line endings in your working directory.
+```
+
+**git-commit** - Commit file to repository
+```
+$ git commit -m "Added files-ds.txt"
+[master f46d0d4] Added files-ds.txt
+ 1 file changed, 4 insertions(+)
+ create mode 100644 files-ds.txt
+```
+
+**git-push** - Push modifications to remote repository
+```
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 376 bytes | 188.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.jci.com/jsikard/git-workshop.git
+   3664d3d..f46d0d4  master -> master
+```
+
+## LAB 2
+
+Cloning, adding, staging, commiting and pushing.  
+
+1. Clone repository **git clone https://github.jci.com/jsikard/git-workshop.git**  
+2. Change directory **cd git-workshop** 
+3. Add a file **ls > files-<your-initials>.txt**
+4. Add to git **git add files-<your-initials>.txt**
+5. Commit **git commit -m "Added files-<your-initials>.txt**
+6. Push to remote repository **git push**
+
+## Next week we will look at branching and merging features as well as **git init**
+
 **git init** - Initialise a repository, list hidden files in chronological and size descending order (-last)
+
 ```
 $ cd ~/Documents/jci-git/
 $ git init multi-mx-simulator
@@ -100,6 +172,6 @@ $ ls -last
 
 Notes, git repositories can be moved around like any set of files, sent as zip file, copied to pen drive, etc.  
 
-Please send any feedback comments to daniel.sikar@jci.com.
+
 
 
